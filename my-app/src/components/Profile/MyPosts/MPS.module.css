@@ -14,8 +14,8 @@
     cursor: pointer;
     margin: 20px;
     margin-left: 10px;
-
 }
+
 .input{
     width: 200px;
     height: 40px;
@@ -23,16 +23,15 @@
     border-radius: 15px;
     font-size: 16px;
 }
+
 .HText{
     margin-top: 50px;
     font-family: sans-serif;
     font-size: 22px;
     font-weight: 600;
-
 }
 
 .formik{
     display: flex;
     align-items: center;
-
 }

@@ -1,14 +1,14 @@
 import React from 'react';
 import NavbarStyle from "./Navbar.module.css"
+import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
     return (
-
             <nav className={NavbarStyle.nav}>
-                <div className={NavbarStyle.link}><a href="React-Redux/my-app/src/components/Navbar/Navbar#">Profile</a></div>
-                <div className={NavbarStyle.link}><a href="React-Redux/my-app/src/components/Navbar/Navbar#">Messages</a></div>
-                <div className={NavbarStyle.link}><a href="React-Redux/my-app/src/components/Navbar/Navbar#">News</a></div>
-                <div className={NavbarStyle.link}><a href="React-Redux/my-app/src/components/Navbar/Navbar#">Music</a></div>
+                <div className={NavbarStyle.link}><NavLink to="/profile">Profile</NavLink></div>
+                <div className={NavbarStyle.link}><NavLink to="/dialogs">Messages</NavLink></div>
+                <div className={NavbarStyle.link}><a href="#">News</a></div>
+                <div className={NavbarStyle.link}><a href="#">Music</a></div>
             </nav>
 
     );
