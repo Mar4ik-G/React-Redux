@@ -1,0 +1,12 @@
+.header {
+    grid-area: h;
+    background-color: #8cbfee;
+
+}
+.header img {
+    width: 70px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 5px 5px;
+}

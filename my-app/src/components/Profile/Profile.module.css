@@ -1,0 +1,24 @@
+.content {
+    grid-area: c;
+    background-color: #ffffff;
+
+}
+
+
+.content img{
+
+    border-radius: 10px;
+    border: 2px solid #003d75;
+    box-sizing: border-box;
+    display: flex;
+    width: 1320px;
+    height: 350px;
+    margin: 0px auto;
+
+
+}
+
+.block{
+    margin-top: 10px;
+    margin-left: 100px;
+}
