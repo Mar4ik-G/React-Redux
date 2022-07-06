@@ -34,6 +34,33 @@ color: gold;
 .verticalLine{
     width: 2px;
     height: 90%;
-    margin: auto 0px;
+    margin: auto auto;
     background-color: #003d75;
+}
+
+.inpBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: white;
+    cursor: pointer;
+    margin: 20px;
+    margin-left: 10px;
+}
+
+.input{
+    width: 300px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: 16px;
 }
