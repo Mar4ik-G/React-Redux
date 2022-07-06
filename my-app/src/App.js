@@ -18,7 +18,10 @@ function App(props) {
                                                               controlInput={props.addText}
                                                               funcAddPost={props.func}
                                                               textInInput={props.state.profile.controllInput}/>}/>
-                    <Route  path="/dialogs/*"  element={<Dialogs dialogsProps={props.state.messages}/>}/>
+                    <Route  path="/dialogs/*"  element={<Dialogs dialogsProps={props.state.messages}
+                                                                 funcT={props.controllInputForDialogs}
+                                                                 funcAddDialog={props.addDialog}
+                                                                 textInInput={props.state.messages.controllInputForDialogs}/>}/>
                     <Route  path="/news/*"  element={<News newsProps={props.state.news}/>}/>
             </Routes>
             </div>

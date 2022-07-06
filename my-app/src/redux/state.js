@@ -29,6 +29,7 @@ export let state = {
             {name: 'Mark', id: '5'},
             {name: 'Oleg', id: '6'},
         ],
+        controllInputForDialogs:'something',
     },
     news: [
         {
@@ -59,9 +60,19 @@ export let addText = (postTextFromInput) => {
    state.profile.controllInput = postTextFromInput;
     rerenderEntireTree(state);
 };
+export let controllInputForDialogs = (postTextFromInput) => {
+   state.messages.controllInputForDialogs = postTextFromInput;
+    rerenderEntireTree(state);
+};
 
-export let addPost = (postMessage) => {
-    let newPost = {id: 7, message: postMessage, like: 0};
+export let addDialog = () => {
+    let newPost = {id: 7, message: state.messages.controllInputForDialogs};
+    state.messages.messageData.push(newPost)
+    rerenderEntireTree(state);
+}
+
+export let addPost = () => {
+    let newPost = {id: 7, message: state.profile.controllInput, like: 0};
     state.profile.messagesData.push(newPost)
     rerenderEntireTree(state);
 }

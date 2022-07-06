@@ -6,8 +6,7 @@ const MyPosts = (props) => {
     const refInput = React.createRef();
 
         const addPost = () => {
-            let text = refInput.current.value;
-            props.func(text)
+            props.func()
             props.funcFroInput('')
         };
 
