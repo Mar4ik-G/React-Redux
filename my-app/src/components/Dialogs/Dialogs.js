@@ -1,21 +1,26 @@
 import React from 'react';
 import DStyle from "./Dialogs.module.css"
-import {NavLink} from "react-router-dom";
+import DialogItem from "./DialogItem/DialogItem";
+import DialogMessage from "./DialogMassege/DialogMessage";
+
 
 const Dialogs = () => {
     return (
         <div className={DStyle.content}>
             <div className={DStyle.dialogsItems}>
-                <div className={DStyle.dialog}><NavLink to='/dialogs/1'>Mark</NavLink></div>
-                <div className={DStyle.dialog}>  <NavLink to='/dialogs/2'>Andrey</NavLink></div>
-                <div className={DStyle.dialog}>  <NavLink to='/dialogs/3'>Oleg</NavLink></div>
-                <div className={DStyle.dialog}>  <NavLink to='/dialogs/4'>Dima</NavLink></div>
-                <div className={DStyle.dialog}>  <NavLink to='/dialogs/5'>Mark</NavLink></div>
+               <DialogItem name='Mark' id='1'/>
+               <DialogItem name='Andrey' id='2'/>
+               <DialogItem name='Oleg' id='3'/>
+               <DialogItem name='Dima' id='4'/>
+               <DialogItem name='Mark' id='5'/>
+               <DialogItem name='Oleg' id='6'/>
             </div>
+            <div className={DStyle.verticalLine}></div>
             <div className={DStyle.messages}>
-                <div className={DStyle.message}>ni</div>
-                <div className={DStyle.message}>OKK</div>
-                <div className={DStyle.message}>QWERTY</div>
+               <DialogMessage message='Hi'/>
+               <DialogMessage message='OKKK'/>
+               <DialogMessage message='HELLO'/>
+
             </div>
         </div>
     );

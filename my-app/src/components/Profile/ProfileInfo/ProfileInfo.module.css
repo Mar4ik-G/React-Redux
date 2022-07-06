@@ -1,0 +1,37 @@
+.infoUser{
+    margin: 30px 0px 10px 50px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.picture{
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.status{
+    font-family: Bahnschrift;
+    font-size: 18px;
+    border-bottom: 2px solid black;
+}
+
+.img1{
+    border-radius: 10px;
+    border: 2px solid #003d75;
+    box-sizing: border-box;
+    display: flex;
+    width: 1314.72px;
+    height: 350px;
+    margin: 0px auto;
+}
+
+.img2{
+    width: 60px;
+    height: 60px;
+}

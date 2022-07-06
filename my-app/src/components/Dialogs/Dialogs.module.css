@@ -1,7 +1,7 @@
 .content{
     background-color: #0f6bc5;
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 2fr 1fr 10fr;
 }
 
 a:focus{
@@ -11,11 +11,29 @@ color: gold;
 .dialogsItems{
     padding: 10px;
 }
+
+.dialog{
+    margin: 10px;
+}
 .messages{
     padding: 10px;
-
 }
 .message{
-
+    color: #000000;
+    margin: 10px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-size: 18px;
+    background-color: #8cbfee;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 80%;
 }
 
+.verticalLine{
+    width: 2px;
+    height: 90%;
+    margin: auto 0px;
+    background-color: #003d75;
+}
