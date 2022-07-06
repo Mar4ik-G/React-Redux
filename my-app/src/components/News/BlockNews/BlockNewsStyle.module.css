@@ -1,0 +1,31 @@
+.blockNew{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    border:2px solid black;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin: 15px;
+}
+
+.header{
+    text-align: center;
+    margin: 10px 0px 5px 0px;
+
+}
+
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: #004f91;
+}
+
+.text{
+    font-family: Bahnschrift;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align:left ;
+    overflow: scroll;
+    overflow-x:hidden;
+}
