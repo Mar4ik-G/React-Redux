@@ -1,3 +1,21 @@
 .content{
     background-color: #0f6bc5;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
 }
+
+a:focus{
+color: gold;
+}
+
+.dialogsItems{
+    padding: 10px;
+}
+.messages{
+    padding: 10px;
+
+}
+.message{
+
+}
+
