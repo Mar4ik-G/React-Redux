@@ -1,7 +1,8 @@
 import React from 'react';
 import MPStyle from "../MyPosts/MPS.module.css";
 import MyPost from "./Post/MyPost";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/state";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/Reducer/profile-reducer";
+
 
 
 

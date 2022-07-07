@@ -15,16 +15,16 @@ function App(props) {
             <Navbar/>
             <div className="content">
                 <Routes>
-                    <Route path="/profile" element={<Profile profileProps={props.state.profile.messagesData}
-                                                             controlInput={props.state.profile.controllInput}
+                    <Route path="/profile" element={<Profile profileProps={props.state.profileReducer.profile.messagesData}
+                                                             controlInput={props.state.profileReducer.profile.controllInput}
                                                              dispatch={props.dispatch}
                                                              />}/>
 
-                    <Route path="/dialogs/*" element={<Dialogs dialogsProps={props.state.messages}
+                    <Route path="/dialogs/*" element={<Dialogs dialogsProps={props.state.dialogsReducer.messages}
                                                                dispatch={props.dispatch}
-                                                               textInInput={props.state.messages.controllInputForDialogs}/>}/>
+                                                               textInInput={props.state.dialogsReducer.messages.controllInputForDialogs}/>}/>
 
-                    <Route path="/news/*" element={<News newsProps={props.state.news}/>}/>
+                    <Route path="/news/*" element={<News newsProps={props.state.newsReducer.news}/>}/>
                 </Routes>
             </div>
 

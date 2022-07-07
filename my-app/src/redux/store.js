@@ -1,7 +1,6 @@
-const ADD_POST ='ADD-POST'
-const UPDATE_NEW_POST_TEXT ='UPDATE-NEW-POST-TEXT'
-const ADD_DIALOG ='ADD-DIALOG'
-const UPDATE_NEW_DIALOG_TEXT ='UPDATE-NEW-DIALOG-TEXT'
+import profileReducer from "./Reducer/profile-reducer";
+import dialogsReducer from "./Reducer/dialogs-reducer";
+
 
 const store={
     _callSubscriber(){
@@ -69,40 +68,10 @@ const store={
         this._callSubscriber = observer;
     },
     dispatch(action){
-
-        if (action.type === 'ADD-POST'){
-            let newPost = {id: 7, message:  this._state.profile.controllInput, like: 0};
-            this._state.profile.messagesData.push(newPost)
-            this._state.profile.controllInput = ""
-            this._callSubscriber( this._state);
-        }else if(action.type === 'UPDATE-NEW-POST-TEXT'){
-            this._state.profile.controllInput = action.payload;
-            this._callSubscriber( this._state);
-        }else if(action.type === 'ADD-DIALOG'){
-            let newPost = {id: 7, message:  this._state.messages.controllInputForDialogs};
-            this._state.messages.messageData.push(newPost)
-            this._state.messages.controllInputForDialogs = ''
-            this._callSubscriber( this._state);
-        }else if(action.type === 'UPDATE-NEW-DIALOG-TEXT'){
-            this._state.messages.controllInputForDialogs =  action.payload;
-            this._callSubscriber( this._state);
-        }
-
-
+        this._state.profile = profileReducer(this._state.profile,action)
+        this._state.messages = dialogsReducer(this._state.messages,action)
+        this._callSubscriber( this._state);
     },
-}
-
-export const addPostActionCreator=()=>{
-    return{type:ADD_POST}
-}
-export const updateNewPostTextActionCreator=(text)=>{
-    return{type:UPDATE_NEW_POST_TEXT,payload:text}
-}
-export const addDialogActionCreator=()=>{
-    return{type:ADD_DIALOG}
-}
-export const updateNewDialogTextActionCreator=(text)=>{
-    return{type:UPDATE_NEW_DIALOG_TEXT,payload:text}
 }
 
 export default store;
