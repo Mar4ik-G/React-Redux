@@ -1,18 +1,23 @@
 import React from 'react';
 import MPStyle from "../MyPosts/MPS.module.css";
 import MyPost from "./Post/MyPost";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/state";
+
+
+
 
 const MyPosts = (props) => {
     const refInput = React.createRef();
 
+
         const addPost = () => {
-            props.func()
-            props.funcFroInput('')
+            props.dispatch(addPostActionCreator())
         };
 
         let addText = () => {
             let text = refInput.current.value;
-            props.funcFroInput(text)
+           let action = updateNewPostTextActionCreator(text)
+            props.dispatch(action)
         };
 
     return (

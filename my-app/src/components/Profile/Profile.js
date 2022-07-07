@@ -9,8 +9,8 @@ const Profile = (props) => {
             <div className={ProfileStyle.content}>
                 <ProfileInfo/>
                 <MyPosts myPostProps={props.profileProps}
-                         func={props.funcAddPost}
-                         funcFroInput={props.controlInput} textForInput={props.textInInput}/>
+                         dispatch={props.dispatch}
+                         textForInput={props.controlInput}/>
             </div>
     );
 };
