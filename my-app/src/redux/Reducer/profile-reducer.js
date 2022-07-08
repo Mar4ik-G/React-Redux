@@ -2,7 +2,6 @@ const ADD_POST ='ADD-POST'
 const UPDATE_NEW_POST_TEXT ='UPDATE-NEW-POST-TEXT'
 
 const initialState={
-    profile: {
         messagesData: [
             {like: 13, message: 'Mark', id: '1'},
             {like: 21, message: 'Where are you from?', id: '2'},
@@ -12,21 +11,19 @@ const initialState={
             {like: 54, message: 'Hi my name Mark', id: '6'},
         ],
         controllInput:'something',
-    },
 }
 
  const profileReducer = (state = initialState ,action) =>{
     switch (action.type) {
-        case ADD_POST:
-            let newPost = {id: 7, message:   state.profile.controllInput, like: 0};
-            state.profile.messagesData.push(newPost)
-            state.profile.controllInput = ""
-            return state
-        case UPDATE_NEW_POST_TEXT:
-            state.profile.controllInput = action.payload;
-           return state
+        case ADD_POST:{
+            let newPost = state.controllInput
+           return {...state, messagesData:[...state.messagesData,{id: 7,  message:newPost, like: 0}] ,controllInput:""}
+        }
+        case UPDATE_NEW_POST_TEXT:{
+           return {...state,controllInput:action.payload};
+        }
         default:
-            return state
+            return state;
     }
 
 }
