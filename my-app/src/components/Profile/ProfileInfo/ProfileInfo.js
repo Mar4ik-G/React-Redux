@@ -1,7 +1,13 @@
 import React from 'react';
 import ProfileInfoStyle from "./ProfileInfo.module.css"
+import Preloader from "../../Preloader/Preloader";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+
+    if(!props.profile){
+        return <Preloader/>
+    }
+
     return (
         <div>
             <div>
@@ -10,8 +16,10 @@ const ProfileInfo = () => {
                     alt="foto-main"/>
             </div>
             <div className={ProfileInfoStyle.infoUser}>
-                <div className={ProfileInfoStyle.picture}><img className={ProfileInfoStyle.img2}  src="https://z30.co/themes/default/statics/img/memojies/img-3.png" alt="avatar"/></div>
-                <div className={ProfileInfoStyle.status}>Марк Програмист</div>
+                <div className={ProfileInfoStyle.picture}>
+                    <img className={ProfileInfoStyle.img2}  src={props.profile.photos.large} alt="avatar"/>
+                </div>
+                <div className={ProfileInfoStyle.status}>{props.profile.fullName + " | status: "+ props.profile.aboutMe }</div>
             </div>
         </div>
 

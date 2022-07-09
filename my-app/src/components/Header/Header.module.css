@@ -10,3 +10,13 @@
     border-radius: 20px;
     margin: 5px 5px;
 }
+
+.loginBlock{
+    height: 100%;
+    min-width: 150px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
