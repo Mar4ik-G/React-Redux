@@ -7,6 +7,7 @@ import {
     useNavigate, useParams,
 } from "react-router-dom";
 import WithAuthRedirect from "../hoc/withAuthRedirect";
+import authReducer from "../../redux/Reducer/auth-reducer";
 
 
 
@@ -55,7 +56,8 @@ let AuthRedirectComponent = WithAuthRedirect(ProfileContainer)
 let mapStateToProps = (state) => {
     return{
         profile:state.profileReducer.profile,
-        status: state.profileReducer.status
+        status: state.profileReducer.status,
+        // userId:authReducer.userId
     }
 
 }

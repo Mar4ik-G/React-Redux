@@ -4,7 +4,8 @@ import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
     return {
-        newsProps:state.newsReducer.news
+        newsProps:state.newsReducer.news,
+        isAuth:state.authReducer.isAuth
     }
 }
 let mapDispatchToProps=(dispatch) => {
