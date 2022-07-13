@@ -15,11 +15,13 @@ const initialState = {
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,
-    followingInProgress: []
+    followingInProgress: [],
+
 }
 
 export const usersReducer = (state = initialState, action) => {
     switch (action.type) {
+
         case SET_USERS:
             return {...state, usersData: action.users}
         case FOLLOW:
