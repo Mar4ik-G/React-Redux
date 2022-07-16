@@ -9,6 +9,13 @@ const ProfileInfo = (props) => {
         return <Preloader/>
     }
 
+    const mainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+           props.savePhoto(e.target.files[0]);
+        }
+    }
+
+
     return (
         <div>
             <div>
@@ -21,8 +28,12 @@ const ProfileInfo = (props) => {
             </div>
             <div className={ProfileInfoStyle.infoUser}>
                 <div className={ProfileInfoStyle.picture}>
-                    <img className={ProfileInfoStyle.img2}  src={props.profile.photos.large} alt="avatar"/>
+                    { props.profile.photos.large
+                        ? <img className={ProfileInfoStyle.img2}  src={props.profile.photos.large} alt="avatar"/>
+                        :  <img className={ProfileInfoStyle.img3}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCF0F86bWVGKdXn52LH-L819uOvAepAuqa3_9fknbfc_Hxyqg2acuB11LbIUq66LMElmU&usqp=CAU"  alt="avatar"/> }
+
                 </div>
+                {props.isOwner && <input type={'file'} onChange={mainPhotoSelected}/>}
                 <div className={ProfileInfoStyle.status}>{props.profile.fullName}    </div>
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
             </div>
