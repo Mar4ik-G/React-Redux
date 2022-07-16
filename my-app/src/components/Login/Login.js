@@ -18,8 +18,7 @@ function Login(props) {
 
             <h1>LOGIN</h1>
             <LoginFormik login={props.login} />
-            <div>
-            </div>
+
         </div>
     );
 }
