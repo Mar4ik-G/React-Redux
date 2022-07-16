@@ -27,6 +27,7 @@ const validationSchemaLoginForm = Yup.object().shape( {
 
 const LoginFormik = (props) => {
 
+
     return (
         <div>
             <h2> ... Login </h2>
@@ -35,7 +36,7 @@ const LoginFormik = (props) => {
                 initialValues={{
                     email: "",
                     password: "",
-                    rememberMe: false
+                    rememberMe: false,
                 }}
                 validate={validateLoginForm}
                 validationSchema={validationSchemaLoginForm}
@@ -45,7 +46,6 @@ const LoginFormik = (props) => {
             >
                 {() => (
                     <Form>
-
                         <div>
                             <Field
                                 name={'email'}
@@ -69,6 +69,11 @@ const LoginFormik = (props) => {
                                 id='rememberMe' />
                             <label htmlFor={'rememberMe'}> remember me </label>
                         </div>
+
+                        {/*<div>*/}
+                        {/*    {props.captcha ? <img src={props.captcha} alt="captcha"/> : "none"}*/}
+                        {/*<Field type={'text'} name={'captcha'} id='captcha'/>*/}
+                        {/*</div>*/}
 
                         <button type={'submit'}>Login</button>
                     </Form>

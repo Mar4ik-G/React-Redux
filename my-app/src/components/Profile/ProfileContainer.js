@@ -1,13 +1,12 @@
 import React from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {getStatus, getUserProfile, savePhoto, updateStatus} from "../../redux/Reducer/profile-reducer";
+import {getStatus, getUserProfile, savePhoto, saveProfile, updateStatus} from "../../redux/Reducer/profile-reducer";
 import {
     useLocation,
     useNavigate, useParams,
 } from "react-router-dom";
 import WithAuthRedirect from "../hoc/withAuthRedirect";
-import authReducer from "../../redux/Reducer/auth-reducer";
 
 
 
@@ -62,7 +61,8 @@ class ProfileContainer extends React.Component {
                   status={this.props.status}
                   updateStatus={this.props.updateStatus}
                   isOwner={!this.props.router.params.userId}
-                  savePhoto={this.props.savePhoto}/>
+                  savePhoto={this.props.savePhoto}
+                />
         );
     }
 }

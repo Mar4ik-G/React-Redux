@@ -1,5 +1,7 @@
 import {profileAPI, usersAPI} from "../../components/api/api";
 
+
+
 const ADD_POST ='ADD-POST'
 const UPDATE_NEW_POST_TEXT ='UPDATE-NEW-POST-TEXT'
 const SET_USER_PROFILE ='SET-USER-PROFILE'
@@ -83,5 +85,6 @@ export const savePhoto = (file) => async (dispatch) => {
         dispatch(savePhotoSuccess(response.data.data.photos));
     }
 }
+
 
 export default profileReducer;

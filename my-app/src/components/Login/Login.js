@@ -5,22 +5,28 @@ import {login, loginOut} from "../../redux/Reducer/auth-reducer";
 import {Navigate} from "react-router-dom";
 
 
-const Login = (props) => {
+function Login(props) {
 
-if (props.isAuth){
-    return <Navigate to='/profile'/>
-}
+    if (props.isAuth) {
+        return <Navigate to='/profile'/>
+    }
+
+
+
     return (
         <div>
 
             <h1>LOGIN</h1>
-            <LoginFormik login={props.login}/>
+            <LoginFormik login={props.login} />
+            <div>
+            </div>
         </div>
     );
-};
+}
 
 const mapStateToProps = (state) => {
     return{
+        // captchaUrl:state.authReducer.captchaUrl,
         isAuth:state.authReducer.isAuth
     }
 }
