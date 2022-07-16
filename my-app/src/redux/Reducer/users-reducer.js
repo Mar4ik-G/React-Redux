@@ -21,7 +21,6 @@ const initialState = {
 
 export const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-
         case SET_USERS:
             return {...state, usersData: action.users}
         case FOLLOW:
